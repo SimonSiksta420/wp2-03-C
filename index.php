@@ -64,7 +64,7 @@ switch ($switch) {
 
 if(isset($submit)) { ?>
 
- <p> Vaše peníze <?= $amount ?> <?= $currencyfrom ?> částku <?= $convertedamount ?> <?= $currencyto ?> </p>
+ <p> Vaše peníze <?= $amount ?> <?= $currencyfrom ?> na částku <?= $convertedamount ?> <?= $currencyto ?> </p>
 
 <?php } else { ?>
 
