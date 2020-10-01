@@ -22,13 +22,13 @@
 
 switch ($switch) {
     case 'czkdoeuro':
-        $convertedamount = $amount * EUR_CZK;
+        $convertedamount = $amount / EUR_CZK;
         $currencyfrom = 'eur';
         $currencyto = 'czk';
         break;
     
     case 'eurodoczk':
-        $convertedamount = $amount / EUR_CZK;
+        $convertedamount = $amount * EUR_CZK;
         $currencyfrom = 'czk';
         $currencyto = 'eur';
         break;
