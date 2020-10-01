@@ -6,7 +6,6 @@
  define('USD_CZK', 23);
  define('GBP_CZK', 30);
  $amount = $penize;
- $convertedamount;
  
  ?>
 <!DOCTYPE html>
@@ -35,19 +34,27 @@ switch ($switch) {
         break;
 
     case 'czkdousd':
-        $money = $penize / USD_CZK;
+        $convertedamount = $amount / USD_CZK
+        $currencyfrom = 'czk';
+        $currencyto = 'usd';
         break;
         
     case 'usddoczk':
-        $money = $penize * USD_CZK;
+        $convertedamount = $amount * USD_CZK;
+        $currencyfrom = 'usd';
+        $currencyto = 'czk';
         break;
 
     case 'czkdogp':
-        $money = $penize / GBP_CZK;
+        $convertedamount = $amount / GBP_CZK;
+        $currencyfrom = 'czk';
+        $currencyto = 'usd';
         break;
             
     case 'gpdoczk':
-        $money = $penize * GBP_CZK;
+        $convertedamount = $amount * GBP_CZK;
+        $currencyfrom = 'gpd';
+        $currencyto = 'czk';
         break;
         
 }
@@ -57,7 +64,7 @@ switch ($switch) {
 
 if(isset($submit)) { ?>
 
- <p> <?= $money ?> </p>
+ <p> Vaše peníze <?= $amount ?> <?= $currencyfrom ?> částku <?= $convertedamount ?> <?= $currencyto ?> </p>
 
 <?php } else { ?>
 
