@@ -34,7 +34,7 @@ switch ($switch) {
         break;
 
     case 'czkdousd':
-        $convertedamount = $amount / USD_CZK
+        $convertedamount = $amount / USD_CZK;
         $currencyfrom = 'czk';
         $currencyto = 'usd';
         break;
